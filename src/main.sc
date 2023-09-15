@@ -27,7 +27,7 @@ theme: /
                     
             state: Straight
                 q: * *прям* *
-                a: Перед вами сундук. Что будете делать?
+                a: Перед тобой сундук. Что будешь делать?
                 
                 state: Open
                     q: открыть
@@ -42,7 +42,7 @@ theme: /
                         
                     state: ChooseLost 
                         q: потратить
-                        a: Лол! Вы все поеряли {{ subtractCoins() }}, Gameover!
+                        a: Хаха! Ты потерял все монеты, теперь у тебя их  {{ subtractCoins() }}, Gameover!
             
         state: NoMelon
             event: noMatch
@@ -50,4 +50,4 @@ theme: /
         
     state: NoMatch
         event!: noMatch
-        a: Попробуйте сказать это на эльфийском.
+        a: Попробуй сказать это на эльфийском.

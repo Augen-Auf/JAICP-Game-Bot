@@ -3,12 +3,12 @@ function getRandomInt(max)
     return Math.floor(Math.random() * max);
 }
 
-function multiple(coins)
+function multipleCoins(coins)
 {
     return coins * 2
 }
 
-function subtract(coins)
+function subtractCoins()
 {
     return 0
 }

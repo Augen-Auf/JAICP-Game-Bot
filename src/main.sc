@@ -30,15 +30,19 @@ theme: /
                 a: Перед вами сундук. Что будете делать?
                 
                 state: Open
-                    q: * *откр* *
+                    q: открыть
                     script: 
                         $session.coins = getRandomInt(11);
                         $reactions.answer("Вам выпали монеты, ровно " + $session.coins)
-                    a: Хотите преумножить или потратить куш?
+                    a: Хочешь преумножить или потратить куш?
                     
-                    state: Choose
+                    state: ChooseMultiple 
                         q: преумножить
-                        a: {{ multiple($session.coins) }}
+                        a: Поздравляю! Ваш выигрыш составил: {{ multipleCoins($session.coins) }} монет!
+                        
+                    state: ChooseLost 
+                        q: потратить
+                        a: Лол! Вы все поеряли {{ substractCoins() }}, Gameover!
             
         state: NoMelon
             event: noMatch

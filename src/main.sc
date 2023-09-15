@@ -30,7 +30,7 @@ theme: /
                 a: Перед тобой сундук. Что будешь делать?
                 
                 state: Open
-                    q: открыть
+                    q: * (~сломать|~открывать|~вскрывать) *
                     script: 
                         $session.coins = getRandomInt(11);
                         $reactions.answer("Вау! Тебе выпали монеты, ровно " + $session.coins)
@@ -38,7 +38,7 @@ theme: /
                     
                     state: ChooseMultiple 
                         q: преумножить
-                        a: Поздравляю! Твой выигрыш составил: {{ multipleCoins($session.coins) }} монет!
+                        a: Поздравляю! Твой выйгрыш составил: {{ multipleCoins($session.coins) }} монет!
                         
                     state: ChooseLost 
                         q: потратить

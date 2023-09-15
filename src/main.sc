@@ -33,16 +33,16 @@ theme: /
                     q: открыть
                     script: 
                         $session.coins = getRandomInt(11);
-                        $reactions.answer("Вам выпали монеты, ровно " + $session.coins)
+                        $reactions.answer("Вау! Тебе выпали монеты, ровно " + $session.coins)
                     a: Хочешь преумножить или потратить куш?
                     
                     state: ChooseMultiple 
                         q: преумножить
-                        a: Поздравляю! Ваш выигрыш составил: {{ multipleCoins($session.coins) }} монет!
+                        a: Поздравляю! Твой выигрыш составил: {{ multipleCoins($session.coins) }} монет!
                         
                     state: ChooseLost 
                         q: потратить
-                        a: Лол! Вы все поеряли {{ substractCoins() }}, Gameover!
+                        a: Лол! Вы все поеряли {{ subtractCoins() }}, Gameover!
             
         state: NoMelon
             event: noMatch

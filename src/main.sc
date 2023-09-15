@@ -30,7 +30,7 @@ theme: /
                 a: Перед вами сундук. Что будете делать?
                 
                 state: Open
-                    q: * (~сломать|~открывать|~вскрывать) *
+                    q: * *откр* *
                     script: 
                         $session.coins = getRandomInt(11);
                         $reactions.answer("Вам выпали монеты, ровно " + $session.coins)

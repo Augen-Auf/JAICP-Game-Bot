@@ -31,11 +31,14 @@ theme: /
                 
                 state: Open
                     q: * (~сломать|~открывать|~вскрывать) *
-                    a: Вам выпали монеты, ровно {{ var coins = getRandomInt(11) }}. Преумножите или потратите?
+                    script: 
+                        $session.coins = getRandomInt(11);
+                        $reactions.answer("Вам выпали монеты, ровно " + $session.coins)
+                    a: Хотите преумножить или потратить куш?
                     
                     state: Choose
                         q: преумножить
-                        a: {{ multiple(coins) }}
+                        a: {{ multiple($session.coins) }}
             
         state: NoMelon
             event: noMatch

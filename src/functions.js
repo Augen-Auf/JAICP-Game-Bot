@@ -12,10 +12,3 @@ function subtract(coins)
 {
     return 0
 }
-
-
-var coins;
-
-if (getRandomInt) {
-    coins = $parseTree.Text[0].value;
-}

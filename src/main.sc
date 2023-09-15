@@ -19,7 +19,7 @@ theme: /
                 
                 state: Restart
                     q: да
-                    go: Restart
+                    go: /Start
                 
             state: Right
                 q: * *прав* *

@@ -10,17 +10,16 @@ theme: /
         a: Молви друг и войди!
         
         state: Melon
-            q: melon
+            q: мелон
             a: Перед тобой три коридора. В какой пойдешь?
             
             state: Left
                 q: * *лев* *
-                a: Тебя съел дракон, !
+                a: Тебя съел дракон, Gameover! Сыграете еще раз?
                 
                 state: Restart
                     q: да
                     go!: /Start
-                
                 
             state: Right
                 q: * *прав* *
@@ -32,7 +31,11 @@ theme: /
                 
                 state: Open
                     q: * (~сломать|открыть|вскрыть) *
-                    a: Вам выпали монеты, ровно {{ getRandomInt(11) }}.
+                    a: Вам выпали монеты, ровно {{ var coins = getRandomInt(11) }}. Преумножите или потратите?
+                    
+                    state: Choose
+                        q: преумножить
+                        a: {{ multiple(coins) }}
             
         state: NoMelon
             event: noMatch

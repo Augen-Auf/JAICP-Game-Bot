@@ -15,11 +15,9 @@ theme: /
             
             state: Left
                 q: * *лев* *
-                a: Тебя съел дракон! Сыграете еще раз?
+                a: Тебя съел дракон, Gameover!
+                go!: /Start
                 
-                state: Restart
-                    q: да
-                    go: /Start
                 
             state: Right
                 q: * *прав* *

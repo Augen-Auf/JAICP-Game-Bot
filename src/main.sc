@@ -27,7 +27,7 @@ theme: /
                 
                 state: Open
                     q: * (~сломать|~открыть|~вскрыть) *
-                    a: Вам выпали монеты, ровно {{ getRandomInt(max) }}
+                    a: Вам выпали монеты, ровно {{ getRandomInt(11) }}
             
         state: NoMelon
             event: noMatch
